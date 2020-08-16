@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     resources :users
     resources :events
     resources :tickets
-    resources :categorie
+    resources :categories
     resources :event_categories
     resources :reviews
     get "users/find_user/:username", to: "users#find_user", as: "find_user"
