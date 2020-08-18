@@ -42,7 +42,7 @@ class Api::UsersController < ApplicationController
 
     # POST /users
     def create
-        user = User.create(username: params[:username], password_digest:[:password_digest])
+        user = User.create(username: params[:username], password_digest: params[:password])
         render json: user.to_json(
             :only => [:id, :username],
             :include => {
